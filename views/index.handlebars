@@ -46,9 +46,12 @@
             <div class="d-flex">
               <button class="btn btn-secondary mx-2 my-4" type="submit">對他說幹話</button>
 
+              {{#if gibberish}}
               <div class="alert alert-primary col-10 mx-2 my-4 d-flex justify-content-center" role="alert">
-                <span class="mr-2">身為一個{{target}}，{{task}}，{{phrase}}</span>
+                <span class="mr-2">{{gibberish}}</span>
               </div>
+              {{/if}}
+
             </div>
 
           </form>
