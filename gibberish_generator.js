@@ -22,6 +22,10 @@ function randomPhrase() {
 
 
 function gibberishGenerator(userPick) {
+  if (userPick.target !== 'engineer' && userPick.target !== 'designer' && userPick.target !== 'entrepreneur') {
+    return '你還沒選擇對誰說幹話喔XD'
+  }
+
   //幹話由三句話串連而成：
   //身為一個工程師，隨手寫個APP，很容易吧？  
   //身為一個{{target}}，{{task}}，{{phrase}}
