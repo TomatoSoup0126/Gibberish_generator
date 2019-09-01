@@ -1,3 +1,12 @@
 .job-img {
-  height: 230px;
+  object-fit: cover;
+  height: 220px; 
+}
+
+#designerImg {
+  margin-left: 20px; 
+}
+
+#engineerImg {
+  margin-left: 20px; 
 }
