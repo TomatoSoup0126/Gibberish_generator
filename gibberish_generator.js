@@ -8,6 +8,12 @@ const task = {
 }
 const phrase = ['很簡單', '很容易', '很快', '很正常']
 
+const jobMap = {
+  engineer: '工程師',
+  designer: '設計師',
+  entrepreneur: '創業家'
+}
+
 
 
 function randomTask(job) {
@@ -31,29 +37,7 @@ function gibberishGenerator(userPick) {
   //身為一個{{target}}，{{task}}，{{phrase}}
   const job = userPick.target
 
-  let gibberish = '身為一個'
-
-  //target可以導入使用者勾選的目標，加到幹話中
-  if (userPick.target === 'engineer') {
-    gibberish += '工程師，'
-  }
-
-  if (userPick.target === 'designer') {
-    gibberish += '設計師，'
-  }
-
-  if (userPick.target === 'entrepreneur') {
-    gibberish += '創業家，'
-  }
-
-  //task可以從task陣列中隨機選出一句話，加到幹話中
-  gibberish += randomTask(job)
-  gibberish += '，'
-
-  //phrase可以從phrase陣列中隨機選出一句話，加到幹話中
-  gibberish += randomPhrase()
-  gibberish += '吧？'
-
+  let gibberish = `身為一個${jobMap[job]}，${randomTask(job)}，${randomPhrase()}吧！`
   //回傳幹話
   return gibberish
 }
